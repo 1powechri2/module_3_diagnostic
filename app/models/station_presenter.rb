@@ -4,12 +4,12 @@ class StationPresenter
   end
 
   def stations
-    stations_hash.map do |station_data|
+    stations_array.map do |station_data|
       st = Station.new(station_data)
     end
   end
 
   def stations_array
-    @service.stations_hash
+    @service.stations_array
   end
 end
