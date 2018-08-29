@@ -10,7 +10,7 @@ class StationService
   end
 
   def stations_response
-    @stations_response ||= conn.get("/api/alt-fuel-stations/v1/nearest.json?api_key=#{@key}&location=80203&radius=6.0&fuel_type=ELEC,LPG&limit=10")
+    @stations_response ||= conn.get("/api/alt-fuel-stations/v1/nearest.json?api_key=#{@key}&location=#{location}&radius=6.0&fuel_type=ELEC,LPG&limit=10")
   end
 
   def stations_json
