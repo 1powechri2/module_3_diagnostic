@@ -1,7 +1,9 @@
-<% @stations.each do |station| %>
-<%= station.name %>
-<%= station.address %>
-<%= station.fuel_type %>
-<%= station.distance %>
-<%= station.access_times %>
-<% end %>
+<ul>
+  <li><% @stations.each do |station| %></li>
+  <li><%= station.name %></li>
+  <li><%= station.address %></li>
+  <li><%= station.fuel_type %></li>
+  <li><%= station.distance %></li>
+  <li><%= station.access_time %></li>
+  <li><% end %></li>
+</ul>

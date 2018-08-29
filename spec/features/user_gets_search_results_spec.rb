@@ -19,7 +19,6 @@ describe 'A user searches for fuel stations' do
       end
 
       expect(current_path).to eq(search_path)
-      # "https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?api_key=#{ENV['API_KEY']}&location=80203&radius=6.0&fuel_type=ELEC,LPG"
     end
   end
 end
