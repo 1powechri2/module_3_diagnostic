@@ -12,5 +12,9 @@ describe Station do
     station = Station.new(attributes)
 
     expect(station.name).to eq(attributes[:name])
+    expect(station.address).to eq(attributes[:address])
+    expect(station.fuel_type).to eq(attributes[:fuel_type])
+    expect(station.distance).to eq(attributes[:distance])
+    expect(station.access_time).to eq(attributes[:access_time])
   end
 end
