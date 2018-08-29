@@ -5,7 +5,7 @@ class StationService
 
   def conn
     Faraday.new(:url => 'https://developer.nrel.gov') do |faraday|
-      faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+      faraday.adapter  Faraday.default_adapter
     end
   end
 
@@ -17,7 +17,7 @@ class StationService
     JSON.parse(stations_response.body, symbolize_names: true)
   end
 
-  def stations_hash
+  def stations_array
     stations_json[:fuel_stations]
   end
 end

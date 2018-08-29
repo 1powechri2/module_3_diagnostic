@@ -9,7 +9,7 @@ class StationPresenter
     end
   end
 
-  def stations_hash
+  def stations_array
     @service.stations_hash
   end
 end
