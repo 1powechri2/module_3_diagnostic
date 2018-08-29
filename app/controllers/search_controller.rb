@@ -1,5 +1,7 @@
 class SearchController < ApplicationController
   def index
+    @stations = StationPresenter.new(ENV['API_KEY']).stations
+
     conn = Faraday.new(:url => 'https://developer.nrel.gov') do |faraday|
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
     end
