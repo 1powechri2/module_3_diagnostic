@@ -18,7 +18,7 @@ describe 'A user searches for fuel stations' do
         click_on "Locate"
       end
 
-      expect(current_path).to eq.(search_path)
+      expect(current_path).to eq(search_path)
     end
   end
 end
