@@ -19,6 +19,12 @@ describe 'A user searches for fuel stations' do
       end
 
       expect(current_path).to eq(search_path)
+
+      expect(page).to have_content("Name: UDR")
+      expect(page).to have_content("Address: 800 Acoma St")
+      expect(page).to have_content("Fuel Type: ELEC")
+      expect(page).to have_content("Distance: 0.31422 miles")
+      expect(page).to have_content("Access Time: 24 hours daily")
     end
   end
 end
