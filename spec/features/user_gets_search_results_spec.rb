@@ -10,7 +10,7 @@ require 'rails_helper'
 
 describe 'A user searches for fuel stations' do
   context 'from the root page' do
-    xit 'entering their zipcode to see stations nearby' do
+    it 'entering their zipcode to see stations nearby' do
       visit '/'
 
       within(".navbar") do
