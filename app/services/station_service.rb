@@ -3,7 +3,6 @@ class StationService
     @key = key
   end
 
-  fuel_stations = json[:fuel_stations]
   def conn
     Faraday.new(:url => 'https://developer.nrel.gov') do |faraday|
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
