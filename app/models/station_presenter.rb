@@ -1,6 +1,6 @@
 class StationPresenter
-  def initialize(key)
-    @service = StationService.new(key)
+  def initialize(key, location)
+    @service = StationService.new(key, location)
   end
 
   def stations

@@ -1,6 +1,7 @@
 class StationService
-  def initialize(key)
+  def initialize(key, location)
     @key = key
+    @location = location
   end
 
   def conn
@@ -10,7 +11,7 @@ class StationService
   end
 
   def stations_response
-    @stations_response ||= conn.get("/api/alt-fuel-stations/v1/nearest.json?api_key=#{@key}&location=#{location}&radius=6.0&fuel_type=ELEC,LPG&limit=10")
+    @stations_response ||= conn.get("/api/alt-fuel-stations/v1/nearest.json?api_key=#{@key}&location=#{@location}&radius=6.0&fuel_type=ELEC,LPG&limit=10")
   end
 
   def stations_json
